@@ -1,0 +1,5 @@
+package de.chatclient.commands;
+
+public class LogoutCommand {
+
+}

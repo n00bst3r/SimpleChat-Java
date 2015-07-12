@@ -1,9 +1,0 @@
-package de.chatclient.commands;
-
-import org.json.simple.JSONObject;
-
-public interface ICommandFour {
-	
-	public JSONObject execute(int seq, String msg, String clientName, String target);
-
-}

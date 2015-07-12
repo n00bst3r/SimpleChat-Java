@@ -200,6 +200,7 @@ public class ClientGUI {
 	  */
 	private ClientGUI(){
 		this.mainFrame = new JFrame("Mailbox Client");
+		this.mainFrame.setIconImage(Toolkit.getDefaultToolkit().getImage(ClientGUI.class.getResource("chatclient/images/clientIcon.png")));
 		this.mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.mainFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		this.mainFrame.setLocationRelativeTo(null);
@@ -230,7 +231,18 @@ public class ClientGUI {
 		JLabel header = new JLabel(" MailBox Client");
 		header.setForeground(Color.black);
 		header.setFont(HEADERFONT);
-
+		try{
+			BufferedImage myPicture = ImageIO.read(this.getClass().getResource("chatclient/images/clientIcon.png"));
+			BufferedImage resizedImage= resize(myPicture,100,100);
+			
+			this.picLabel = new JLabel(new ImageIcon(resizedImage));
+		} catch (IOException ex) {
+			System.err.println("Image konnte nicht geladen werden.");
+			ex.printStackTrace();
+		}
+		
+		
+		this.northPanel.add(picLabel);
 		this.northPanel.add(header);
 		this.backgroundPanel.add(BorderLayout.NORTH, this.northPanel);
 		

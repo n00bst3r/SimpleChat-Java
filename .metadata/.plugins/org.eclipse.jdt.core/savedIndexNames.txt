@@ -1,0 +1,5 @@
+INDEX VERSION 1.126+C:\Users\Daniel\Documents\Repos\Simple_Java_Chat\SimpleChat-Java\.metadata\.plugins\org.eclipse.jdt.core
+313227609.index
+2407704826.index
+3811574446.index
+3189171838.index
